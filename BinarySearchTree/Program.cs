@@ -6,7 +6,7 @@ namespace BinarySearchTree
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to Binary Search Tree.");
+            Console.WriteLine("Welcome to Binary Search Tree.\n");
             BinarySearchTree<int> binarySearchTree = new BinarySearchTree<int>();
             binarySearchTree.InsertData(56);
             binarySearchTree.InsertData(30);
@@ -22,8 +22,10 @@ namespace BinarySearchTree
             binarySearchTree.InsertData(63);
             binarySearchTree.InsertData(67);
             binarySearchTree.Display(binarySearchTree.GetRoot());
-
-            Console.WriteLine("Count of elements in Binary search tree is: " + binarySearchTree.GetSize());
+            Console.WriteLine("\n");
+            Console.WriteLine("Count of elements in Binary search tree is: " + binarySearchTree.GetSize()+"\n");            
+            bool result = binarySearchTree.SearchTree(63, binarySearchTree.GetRoot());
+            Console.WriteLine(result);
         }
     }
 }
